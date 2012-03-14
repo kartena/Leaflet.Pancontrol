@@ -7,4 +7,4 @@ Kind of works. Only tested in Chrome and Firefox. Read TODO.md for mor informati
 
 Also see [Leaflet.Zoomslider][1]
 
-1: https://github.com/mattiasbengtsson/Leaflet.zoomslider
+[1]: https://github.com/mattiasbengtsson/Leaflet.zoomslider
