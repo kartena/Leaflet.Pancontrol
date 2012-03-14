@@ -3,4 +3,8 @@ Leaflet.Pancontrol
 
 A simple panning control for Leaflet. 
 
-__Work in progress. Nothing to see here for now!__
+Kind of works. Only tested in Chrome and Firefox. Read TODO.md for mor information.
+
+Also see [Leaflet.Zoomslider][1]
+
+1: https://github.com/mattiasbengtsson/Leaflet.zoomslider
