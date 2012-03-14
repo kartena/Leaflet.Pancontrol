@@ -14,7 +14,7 @@
    (https://github.com/mattiasbengtsson/Leaflet.zoomslider) 
    align with the pan control. 
 */
-.leaflet-control-zoomSlider {
+.leaflet-control-zoomslider {
 	position: relative;
 	left:26px;
 }
