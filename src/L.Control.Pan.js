@@ -31,7 +31,7 @@ L.Control.Pan = L.Control.extend({
 			.addListener(link, 'dblclick', L.DomEvent.stopPropagation)
 
 		return link;
-	},
+	}
 });
 
 L.Map.mergeOptions({
