@@ -16,4 +16,7 @@ var osmTileJSON = {
     "center": [ 11.9, 57.7, 8 ]
 };
 
-var map = L.TileJSON.createMap('map', osmTileJSON); 
+var map = L.TileJSON.createMap('map', osmTileJSON, { mapOptions: {zoomControl: false, panControl: false } }); 
+map.addControl(new L.Control.Zoom());
+map.addControl(new L.Control.Pan());
+
