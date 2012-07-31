@@ -9,10 +9,14 @@ L.Control.Pan = L.Control.extend({
 			container = L.DomUtil.create('div', className),
 			off = this.options.panOffset;
 
-		this._panButton('Up'   , className + '-up'   , container, map, new L.Point(    0 , -off));
-		this._panButton('Left' , className + '-left' , container, map, new L.Point( -off ,  0));
-		this._panButton('Right', className + '-right', container, map, new L.Point(  off ,  0));
-		this._panButton('Down' , className + '-down' , container, map, new L.Point(    0 ,  off));
+		this._panButton('Up'   , className + '-up'   
+						, container, map, new L.Point(    0 , -off));
+		this._panButton('Left' , className + '-left' 
+						, container, map, new L.Point( -off ,  0));
+		this._panButton('Right', className + '-right'
+						, container, map, new L.Point(  off ,  0));
+		this._panButton('Down' , className + '-down'
+						, container, map, new L.Point(    0 ,  off));
 		
 		return container;
 	},
@@ -23,12 +27,10 @@ L.Control.Pan = L.Control.extend({
 		link.href = '#';
 		link.title = title;
 		L.DomEvent
-			.addListener(link, 'click', L.DomEvent.stopPropagation)
-			.addListener(link, 'click', L.DomEvent.preventDefault)
-			.addListener(link, 'click', function(){ map.panBy(offset); }, map);
-		
-		L.DomEvent
-			.addListener(link, 'dblclick', L.DomEvent.stopPropagation)
+			.on(link, 'click', L.DomEvent.stopPropagation)
+			.on(link, 'click', L.DomEvent.preventDefault)
+			.on(link, 'click', function(){ map.panBy(offset); }, map)
+			.on(link, 'dblclick', L.DomEvent.stopPropagation)
 
 		return link;
 	}
@@ -44,3 +46,7 @@ L.Map.addInitHook(function () {
 		this.addControl(this.panControl);
 	}
 });
+
+L.control.pan = function (options) {
+    return new L.Control.Pan(options);
+};
