@@ -1,9 +1,9 @@
 Leaflet.Pancontrol
 ==================
 
-A simple panning control for Leaflet. 
+A panning control for Leaflet. 
 
-Kind of works. Tested in Chrome, Firefox and IE9. Read TODO.md for more information.
+Tested with Chrome, IE 7-9 and Firefox. 
 
 Also see [Leaflet.Zoomslider][1]
 
