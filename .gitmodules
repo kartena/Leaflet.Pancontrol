@@ -1,6 +1,3 @@
 [submodule "lib/Leaflet.Pancontrol"]
 	path = lib/Leaflet.Pancontrol
 	url = git@github.com:kartena/Leaflet.Pancontrol.git
-[submodule "lib/Leaflet"]
-	path = lib/Leaflet
-	url = git://github.com/CloudMade/Leaflet.git
