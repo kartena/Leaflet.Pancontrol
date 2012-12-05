@@ -7,10 +7,14 @@
 
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.4.5/leaflet.css" />
+	<link rel="stylesheet" href="lib/Leaflet.Pancontrol/src/L.Control.Pan.css" />
     <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+		<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.4.5/leaflet.ie.css" />
+		<link rel="stylesheet" href="lib/Leaflet.Pancontrol/src/L.Control.Pan.ie.css" />
+		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
   </head>
   <body>
     <div class="wrapper">
@@ -30,9 +34,11 @@
       <section>
         <h1>Leaflet.Pancontrol</h1>
 
-<p>A panning control for Leaflet. </p>
+		<p>A panning control for Leaflet. </p>
 
-<p>Tested with Chrome, IE 7-9 and Firefox. </p>
+		<p>Tested with Chrome, IE 7-9 and Firefox. </p>
+
+		<div id="map" style="width:543px; height: 450px;"></div>
       </section>
       <footer>
         <p>This project is maintained by <a href="https://github.com/kartena">kartena</a></p>
@@ -40,6 +46,15 @@
       </footer>
     </div>
     <script src="javascripts/scale.fix.js"></script>
-    
+    <script src="javascripts/osm.tilejson.js"></script>
+	<script src="http://cdn.leafletjs.com/leaflet-0.4.5/leaflet.js"></script>
+    <script src="lib/leaflet-tilejson/src/tilejson.js"></script>
+    <script src="lib/Leaflet.Pancontrol/src/L.Control.Pan.js"></script>
+	
+	<script>
+        L.TileJSON.createMap('map', osmTileJSON, { 
+            mapConfig: { zoomControl: false } 
+        }); 
+	</script>
   </body>
 </html>
