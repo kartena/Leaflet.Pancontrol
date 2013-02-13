@@ -11,27 +11,27 @@
 
 .leaflet-control-pan-up-wrap {
 	position:absolute;
-	left:29px;
+	left:27px;
 }
 .leaflet-control-pan-left-wrap {
 	position:absolute;
-	top:29px;
+	top:27px;
 }
 .leaflet-control-pan-right-wrap {
 	position:absolute;
-	left:58px;	
-	top:29px;
+	left:54px;	
+	top:27px;
 }
 .leaflet-control-pan-down-wrap {
 	position:absolute;
-	left:29px;
-	top:58px;
+	left:27px;
+	top:54px;
 }
 
 .leaflet-control-zoom {
-	left:29px;
+	left:23px;
 }
 .leaflet-control-zoomslider {
 	position: relative;
-	left:29px;
+	left:23px;
 }
