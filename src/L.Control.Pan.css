@@ -7,7 +7,7 @@
 */
 .leaflet-control-zoom {
 	position: relative;
-	left:23px;
+	left:24px;
 }
 /* 
    Make the zoomSlider control 
@@ -35,16 +35,15 @@
 }
 
 .leaflet-control-pan > div {
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
 }
 .leaflet-control-pan > div {
-  border: 1px solid #888;
-  box-shadow: 0 0 8px rgba(0,0,0,0.4);
+  box-shadow: 0 1px 7px rgba(0,0,0,0.65);
 }
 .leaflet-control-pan a {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: #fff;
 }
 .leaflet-control-pan a{
     background-position: 50% 50%;
@@ -55,11 +54,11 @@
     -moz-border-radius: 4px;
     -webkit-border-radius: 4px;
     border-radius: 4px;
-    width: 22px;
-    height: 22px;
+    width: 23px;
+    height: 23px;
 }
 .leaflet-control-pan a:hover {
-    background-color: #fff;
+    background-color: #f4f4f4;
 }
 
 .leaflet-control-pan-up-wrap {
