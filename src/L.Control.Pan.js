@@ -37,7 +37,7 @@ L.Control.Pan = L.Control.extend({
 });
 
 L.Map.mergeOptions({
-    panControl: true
+    panControl: false
 });
 
 L.Map.addInitHook(function () {
