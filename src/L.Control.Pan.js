@@ -18,8 +18,7 @@ L.Control.Pan = L.Control.extend({
 		this._panButton('Down' , className + '-down'
 						, container, map, new L.Point(    0 ,  off));
 
-
-    // Add pan controll class to the control container
+    // Add pan control class to the control container
     var controlContainer = L.DomUtil.get(map._controlCorners.topleft);
     if(!L.DomUtil.hasClass(controlContainer, 'has-leaflet-pan-control'))
     {
@@ -30,7 +29,7 @@ L.Control.Pan = L.Control.extend({
 	},
 
   onRemove: function (map) {
-    // Remove pan controll class to the control container
+    // Remove pan control class to the control container
     var controlContainer = L.DomUtil.get(map._controlCorners.topleft);
     if(L.DomUtil.hasClass(controlContainer, 'has-leaflet-pan-control'))
     {
