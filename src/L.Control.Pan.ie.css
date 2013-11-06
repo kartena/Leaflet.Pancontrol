@@ -1,12 +1,15 @@
 
 .leaflet-control-pan > div {
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#3F000000',EndColorStr='#3F000000');
+  border: 3px solid #999;
 }
 .leaflet-control-pan a {
-	background-color: #eee;
+	background-color: #fff;
+  width: 17px;
+  height: 17px;
 }
 .leaflet-control-pan a:hover {
-    background-color: #fff;
+  background-color: #f4f4f4;
 }
 
 .leaflet-control-pan-up-wrap {
