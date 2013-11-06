@@ -5,7 +5,7 @@
    should make all the child boxes be center-aligned instead. 
    Not sure if that is possible though.
 */
-.leaflet-control-zoom {
+.has-leaflet-pan-control .leaflet-control-zoom {
 	position: relative;
 	left:24px;
 }
@@ -14,7 +14,7 @@
    (https://github.com/mattiasbengtsson/Leaflet.zoomslider) 
    align with the pan control. 
 */
-.leaflet-control-zoomslider {
+.has-leaflet-pan-control .leaflet-control-zoomslider {
 	position: relative;
 	left:22px;
 }

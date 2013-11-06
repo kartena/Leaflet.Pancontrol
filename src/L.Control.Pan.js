@@ -17,9 +17,26 @@ L.Control.Pan = L.Control.extend({
 						, container, map, new L.Point(  off ,  0));
 		this._panButton('Down' , className + '-down'
 						, container, map, new L.Point(    0 ,  off));
+
+
+    // Add pan controll class to the control container
+    var controlContainer = L.DomUtil.get(map._controlCorners.topleft);
+    if(!L.DomUtil.hasClass(controlContainer, 'has-leaflet-pan-control'))
+    {
+      L.DomUtil.addClass(controlContainer, 'has-leaflet-pan-control');
+    }
 		
 		return container;
 	},
+
+  onRemove: function (map) {
+    // Remove pan controll class to the control container
+    var controlContainer = L.DomUtil.get(map._controlCorners.topleft);
+    if(L.DomUtil.hasClass(controlContainer, 'has-leaflet-pan-control'))
+    {
+      L.DomUtil.removeClass(controlContainer, 'has-leaflet-pan-control');
+    }
+  },
 
 	_panButton: function (title, className, container, map, offset, text) {
 		var wrapper = L.DomUtil.create('div', className + "-wrap", container);
