@@ -29,6 +29,6 @@
     "url": "https://github.com/kartena/Leaflet.Pancontrol/issues"
   },
   "dependencies": {
-    "leaflet": "~0.6.4"
+    "leaflet": "~0.7.1"
   }
 }
