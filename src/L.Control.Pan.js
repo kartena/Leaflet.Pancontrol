@@ -37,7 +37,15 @@
 							container, map, new L.Point(    0 ,  off));
 
 			// Add pan control class to the control container
-			var controlContainer = L.DomUtil.get(map._controlCorners.topleft);
+			if (this.options.position === 'topleft') {
+				var controlContainer = L.DomUtil.get(map._controlCorners.topleft);
+			} else if (this.options.position === 'topright') {
+				var controlContainer = L.DomUtil.get(map._controlCorners.topright);
+			} else if (this.options.position === 'bottomleft') {
+				var controlContainer = L.DomUtil.get(map._controlCorners.bottomleft);
+			} else {
+				var controlContainer = L.DomUtil.get(map._controlCorners.bottomright);
+			}
 			if(!L.DomUtil.hasClass(controlContainer, 'has-leaflet-pan-control')) {
 				L.DomUtil.addClass(controlContainer, 'has-leaflet-pan-control');
 			}
