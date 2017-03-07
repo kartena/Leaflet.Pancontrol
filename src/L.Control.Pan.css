@@ -5,18 +5,27 @@
    should make all the child boxes be center-aligned instead. 
    Not sure if that is possible though.
 */
-.has-leaflet-pan-control .leaflet-control-zoom {
+.leaflet-left.has-leaflet-pan-control .leaflet-control-zoom {
 	position: relative;
-	left:24px;
+	left: 24px;
 }
+.leaflet-right.has-leaflet-pan-control .leaflet-control-zoom {
+	position: relative;
+	right: 24px;
+}
+
 /* 
    Make the zoomSlider control 
    (https://github.com/mattiasbengtsson/Leaflet.zoomslider) 
    align with the pan control. 
 */
-.has-leaflet-pan-control .leaflet-control-zoomslider {
+.leaflet-left.has-leaflet-pan-control .leaflet-control-zoomslider {
 	position: relative;
-	left:22px;
+	left: 22px;
+}
+.leaflet-right.has-leaflet-pan-control .leaflet-control-zoomslider {
+	position: relative;
+	right: 22px;
 }
 
 .leaflet-control-pan  {
@@ -95,22 +104,28 @@
 
 /****** Touch Alterations ******/
 .leaflet-touch .leaflet-control-pan div {
-  border: 4px solid rgba(0, 0, 0, 0.3);
+  border: 2px solid rgba(0, 0, 0, 0.2);
   box-shadow: none;
 
-  border-radius: 10px;
+  border-radius: 4px;
 }
 
 .leaflet-touch .leaflet-control-pan {
   width: 89px;
   height: 119px;
+  margin-left: 8px;
+}
+
+.leaflet-touch .leaflet-right .leaflet-control-pan {
+  margin-left: 0;
+  margin-right: 5px;
 }
 
 .leaflet-touch .leaflet-control-pan a {
   width: 30px;
   height: 30px;
 
-  border-radius: 7px;
+  border-radius: 4px;
 }
 
 .leaflet-touch .leaflet-control-pan-up-wrap {
