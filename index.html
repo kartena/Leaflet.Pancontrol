@@ -7,7 +7,7 @@
 
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.4.5/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
 	<link rel="stylesheet" href="lib/Leaflet.Pancontrol/src/L.Control.Pan.css" />
     <!--[if lt IE 9]>
 		<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.4.5/leaflet.ie.css" />
@@ -26,8 +26,8 @@
 
 
         <ul>
-          <li><a href="https://github.com/kartena/Leaflet.Pancontrol/archive/v0.4.5.zip">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/kartena/Leaflet.Pancontrol/archive/v0.4.5.tar.gz">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/kartena/Leaflet.Pancontrol/archive/v1.0.0.zip">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/kartena/Leaflet.Pancontrol/archive/v1.0.0.tar.gz">Download <strong>TAR Ball</strong></a></li>
           <li><a href="https://github.com/kartena/Leaflet.Pancontrol">View On <strong>GitHub</strong></a></li>
         </ul>
       </header>
@@ -47,14 +47,16 @@
     </div>
     <script src="javascripts/scale.fix.js"></script>
     <script src="javascripts/osm.tilejson.js"></script>
-	<script src="http://cdn.leafletjs.com/leaflet-0.4.5/leaflet.js"></script>
+	  <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
     <script src="lib/leaflet-tilejson/src/tilejson.js"></script>
     <script src="lib/Leaflet.Pancontrol/src/L.Control.Pan.js"></script>
 	
-	<script>
+	  <script>
         L.TileJSON.createMap('map', osmTileJSON, { 
             mapConfig: { zoomControl: false } 
-        }); 
-	</script>
+        });
+        L.control.pan().addTo(map);
+        L.control.zoom().addTo(map);
+	  </script>
   </body>
 </html>
