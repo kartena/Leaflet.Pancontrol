@@ -52,7 +52,7 @@
     <script src="lib/Leaflet.Pancontrol/src/L.Control.Pan.js"></script>
 	
 	  <script>
-        L.TileJSON.createMap('map', osmTileJSON, { 
+        var map = L.TileJSON.createMap('map', osmTileJSON, { 
             mapConfig: { zoomControl: false } 
         });
         L.control.pan().addTo(map);
