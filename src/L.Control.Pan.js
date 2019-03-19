@@ -76,10 +76,6 @@
 		}
 	});
 
-	L.Map.mergeOptions({
-		panControl: false
-	});
-
 	L.Map.addInitHook(function () {
 		if (this.options.panControl) {
 			this.panControl = new L.Control.Pan();
