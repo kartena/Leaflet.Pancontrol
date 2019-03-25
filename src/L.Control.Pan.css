@@ -5,6 +5,13 @@
 	right: 24.5px;
 }
 
+.leaflet-left.has-leaflet-pan-control .leaflet-control-scale {
+	left: -24.5px;
+}
+.leaflet-right.has-leaflet-pan-control .leaflet-control-scale {
+	right: -24.5px;
+}
+
 .leaflet-left .leaflet-control-pan {
 	left: -24.5px;
 }
@@ -83,6 +90,13 @@
 }
 .leaflet-touch .leaflet-right.has-leaflet-pan-control {
 	right: 26px;
+}
+
+.leaflet-touch .leaflet-left.has-leaflet-pan-control .leaflet-control-scale {
+	left: -26px;
+}
+.leaflet-touch .leaflet-right.has-leaflet-pan-control .leaflet-control-scale {
+	right: -26px;
 }
 
 .leaflet-touch .leaflet-left .leaflet-control-pan {
