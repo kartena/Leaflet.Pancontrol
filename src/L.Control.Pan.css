@@ -1,92 +1,74 @@
-/* Make the default zoom control align with the pan control.
-   
-   This is ugly. 
-   The parent box (class="leaflet-top leaflet-left") 
-   should make all the child boxes be center-aligned instead. 
-   Not sure if that is possible though.
-*/
-.leaflet-left.has-leaflet-pan-control .leaflet-control-zoom {
-	position: relative;
-	left: 24px;
+.leaflet-left.has-leaflet-pan-control {
+	left: 24.5px; /* (75-26)/2 */
 }
-.leaflet-right.has-leaflet-pan-control .leaflet-control-zoom {
-	position: relative;
-	right: 24px;
+.leaflet-right.has-leaflet-pan-control {
+	right: 24.5px;
 }
 
-/* 
-   Make the zoomSlider control 
-   (https://github.com/mattiasbengtsson/Leaflet.zoomslider) 
-   align with the pan control. 
-*/
-.leaflet-left.has-leaflet-pan-control .leaflet-control-zoomslider {
-	position: relative;
-	left: 22px;
+.leaflet-left.has-leaflet-pan-control .leaflet-control-scale {
+	left: -24.5px;
 }
-.leaflet-right.has-leaflet-pan-control .leaflet-control-zoomslider {
-	position: relative;
-	right: 22px;
+.leaflet-right.has-leaflet-pan-control .leaflet-control-scale {
+	right: -24.5px;
 }
 
-.leaflet-control-pan  {
-	   /* 
-	     .leaflet-control-pan-right-wrap: right 
-	   + .leaflet-control-pan a: width
-	   = 52 + 24 = 76
-	   */
-	width: 76px; 
-	   /* 
-	     .leaflet-control-pan-down-wrap: top
-	   + .leaflet-control-pan a: height
-	   = 52 + 24 = 76
-	   */
-	height: 76px;
+.leaflet-left .leaflet-control-pan {
+	left: -24.5px;
+}
+.leaflet-right .leaflet-control-pan {
+	right: -24.5px;
+}
+
+.leaflet-control-pan {
+	/*
+	  .leaflet-control-pan-right-wrap: right
+	+ .leaflet-control-pan a: width
+	= 52 + 23 = 75
+	*/
+	width: 75px;
+	/*
+	  .leaflet-control-pan-down-wrap: top
+	+ .leaflet-control-pan a: height
+	= 52 + 23 = 75
+	*/
+	height: 75px;
 }
 
 .leaflet-control-pan > div {
-    -moz-border-radius: 4px;
-    -webkit-border-radius: 4px;
-    border-radius: 4px;
-}
-.leaflet-control-pan > div {
-  box-shadow: 0 1px 7px rgba(0,0,0,0.65);
-}
-.leaflet-control-pan a {
-    background-color: #fff;
-}
-.leaflet-control-pan a{
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    display: block;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	box-shadow: 0 1px 7px rgba(0,0,0,0.65);
+	position: absolute;
 }
 .leaflet-control-pan a {
-    -moz-border-radius: 4px;
-    -webkit-border-radius: 4px;
-    border-radius: 4px;
-    width: 23px;
-    height: 23px;
+	background-color: #fff;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	display: block;
+	width: 23px;
+	height: 23px;
 }
 .leaflet-control-pan a:hover {
-    background-color: #f4f4f4;
+	background-color: #f4f4f4;
 }
 
 .leaflet-control-pan-up-wrap {
-	position:absolute;
-	left:26px;
+	left: 26px;
 }
 .leaflet-control-pan-left-wrap {
-	position:absolute;
-	top:26px;
+	top: 26px;
 }
 .leaflet-control-pan-right-wrap {
-	position:absolute;
-	left:52px;	
-	top:26px;
+	left: 52px;
+	top: 26px;
 }
 .leaflet-control-pan-down-wrap {
-	position:absolute;
-	left:26px;
-	top:52px;
+	left: 26px;
+	top: 52px;
 }
 
 .leaflet-control-pan-up {
@@ -103,45 +85,56 @@
 }
 
 /****** Touch Alterations ******/
-.leaflet-touch .leaflet-control-pan div {
-  border: 2px solid rgba(0, 0, 0, 0.2);
-  box-shadow: none;
+.leaflet-touch .leaflet-left.has-leaflet-pan-control {
+	left: 26px;  /* (86-30)/2-2 */
+}
+.leaflet-touch .leaflet-right.has-leaflet-pan-control {
+	right: 26px;
+}
 
-  border-radius: 4px;
+.leaflet-touch .leaflet-left.has-leaflet-pan-control .leaflet-control-scale {
+	left: -26px;
+}
+.leaflet-touch .leaflet-right.has-leaflet-pan-control .leaflet-control-scale {
+	right: -26px;
+}
+
+.leaflet-touch .leaflet-left .leaflet-control-pan {
+	left: -26px;
+}
+.leaflet-touch .leaflet-right .leaflet-control-pan {
+	right: -26px;
 }
 
 .leaflet-touch .leaflet-control-pan {
-  width: 89px;
-  height: 119px;
-  margin-left: 8px;
+	width: 86px; /* 52+30+2*2 */
+	height: 114px;
 }
 
-.leaflet-touch .leaflet-right .leaflet-control-pan {
-  margin-left: 0;
-  margin-right: 5px;
+.leaflet-touch .leaflet-control-pan div {
+	border: 2px solid rgba(0, 0, 0, 0.2);
+	box-shadow: none;
 }
 
 .leaflet-touch .leaflet-control-pan a {
-  width: 30px;
-  height: 30px;
-
-  border-radius: 4px;
+	width: 30px;
+	height: 30px;
 }
 
 .leaflet-touch .leaflet-control-pan-up-wrap {
-  left:26px;
+	left: 26px;
 }
 
 .leaflet-touch .leaflet-control-pan-left-wrap {
-  top:40px;
+	top: 40px;
 }
 
 .leaflet-touch .leaflet-control-pan-right-wrap {
-  left:52px;
-  top:40px;
+	left: 52px;
+	top: 40px;
 }
 
 .leaflet-touch .leaflet-control-pan-down-wrap {
-  left:26px;
-  top:80px;
+	left: 26px;
+	top: 80px;
 }

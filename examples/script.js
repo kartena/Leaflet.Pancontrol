@@ -20,5 +20,8 @@ var map = L.TileJSON.createMap('map', osmTileJSON, {
 	mapOptions: { zoomControl: false }
 });
 
-L.control.pan().addTo(map);
-L.control.zoom().addTo(map);
+var options = {
+	position: 'topleft'
+};
+L.control.pan(options).addTo(map);
+L.control.zoom({ position: options.position }).addTo(map);
